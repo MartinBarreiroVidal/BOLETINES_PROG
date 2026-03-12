@@ -29,8 +29,8 @@ while True:
         try:
             with open(ficheiro_notas, "r") as f:
                 notas = f.readlines()
-            for i, nota in enumerate(notas, 1):
-                print(f"{i}. {nota.strip()}")
+            for linha in notas:
+                print(linha.strip())
         except FileNotFoundError:
             print("Non hai notas gardadas.")
 
@@ -39,9 +39,9 @@ while True:
         try:
             with open(ficheiro_notas, "r") as f:
                 notas = f.readlines()
-            for nota in notas:
-                if palabra.lower() in nota.lower():
-                    print(nota.strip())
+            for linha in notas:
+                if palabra.lower() in linha.lower():
+                    print(linha.strip())
         except FileNotFoundError:
             print("Non hai notas gardadas.")
 
